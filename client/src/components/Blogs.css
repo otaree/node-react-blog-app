@@ -1,0 +1,19 @@
+.Blogs.__container {
+    width: 80%;
+    margin: 10px auto;
+}
+
+.Blogs.__container ul {
+    list-style: none;
+}
+
+.Blogs.__container ul a {
+    text-decoration: none;
+    color: #222;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.Blogs.__container ul a:hover {
+    color: #ddd;
+}

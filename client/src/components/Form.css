@@ -1,0 +1,66 @@
+.form {
+    width: 80%;
+    margin: 10px 15%;
+}
+
+.form-control .form-input, 
+.form-control .form-textarea
+ {
+    outline: none;
+    width: 80%;
+    margin: 10px 0;
+    border: 1px solid #888;
+    border-radius: 3px;
+    height: 25px;
+    padding-left: 10px;
+}
+
+.form-control .form-textarea {
+    padding-top: 10px;
+    height: 300px;
+}
+
+.form-control .form-input:focus, .form-control .form-textarea:focus {
+    border: 2px solid rgb(102, 156, 173);    
+}
+
+.form-select label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+.form-select select {
+    outline: none;
+    border: thin solid #888;
+    border-radius: 3px;
+    width: 70px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #ccc;
+    margin-bottom: 10px;
+}
+
+.submit {
+    margin: 0 35%;
+}
+
+.btn-submit {
+    outline: none;
+    border: 1px solid #888;
+    font-size: 16px;
+    background-color: rgb(55, 148, 55);
+    color: #eee;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 10px;
+    width: 90px;
+}
+
+.btn-submit:hover {
+    background-color: lightgreen;
+    color: #444;
+    cursor: pointer;
+}

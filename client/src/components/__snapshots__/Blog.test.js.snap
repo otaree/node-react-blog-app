@@ -1,0 +1,363 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blog renders properly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown
+    blogs={
+        Array [
+            Object {
+              "_id": "1",
+              "author": "Tester",
+              "body": "First's body",
+              "published": false,
+              "title": "First Title",
+            },
+            Object {
+              "_id": "2",
+              "author": "Tester",
+              "body": "Second's body",
+              "published": true,
+              "publishedAt": 1000,
+              "title": "Second Title",
+            },
+          ]
+    }
+    match={
+        Object {
+            "params": Object {
+              "id": "2",
+            },
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2>
+          Second Title
+</h2>,
+        <p>
+          Second's body
+</p>,
+        <p>
+          Tester
+</p>,
+        <div
+          className="Blog __body"
+>
+          <p>
+                    Published: 
+                    1000
+          </p>
+</div>,
+        <div>
+          <button
+                    className="btn-edit"
+          >
+                    <Link
+                              replace={false}
+                              to="/blogs/edit/2"
+                    >
+                              Edit
+                    </Link>
+          </button>
+</div>,
+      ],
+      "className": "Blog",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Second Title",
+        },
+        "ref": null,
+        "rendered": "Second Title",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Second's body",
+        },
+        "ref": null,
+        "rendered": "Second's body",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Tester",
+        },
+        "ref": null,
+        "rendered": "Tester",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <p>
+            Published: 
+            1000
+</p>,
+          "className": "Blog __body",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Published: ",
+              1000,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Published: ",
+            1000,
+          ],
+          "type": "p",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <button
+            className="btn-edit"
+>
+            <Link
+                        replace={false}
+                        to="/blogs/edit/2"
+            >
+                        Edit
+            </Link>
+</button>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Link
+              replace={false}
+              to="/blogs/edit/2"
+>
+              Edit
+</Link>,
+            "className": "btn-edit",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Edit",
+              "replace": false,
+              "to": "/blogs/edit/2",
+            },
+            "ref": null,
+            "rendered": "Edit",
+            "type": [Function],
+          },
+          "type": "button",
+        },
+        "type": "div",
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2>
+            Second Title
+</h2>,
+          <p>
+            Second's body
+</p>,
+          <p>
+            Tester
+</p>,
+          <div
+            className="Blog __body"
+>
+            <p>
+                        Published: 
+                        1000
+            </p>
+</div>,
+          <div>
+            <button
+                        className="btn-edit"
+            >
+                        <Link
+                                    replace={false}
+                                    to="/blogs/edit/2"
+                        >
+                                    Edit
+                        </Link>
+            </button>
+</div>,
+        ],
+        "className": "Blog",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Second Title",
+          },
+          "ref": null,
+          "rendered": "Second Title",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Second's body",
+          },
+          "ref": null,
+          "rendered": "Second's body",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Tester",
+          },
+          "ref": null,
+          "rendered": "Tester",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <p>
+              Published: 
+              1000
+</p>,
+            "className": "Blog __body",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Published: ",
+                1000,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Published: ",
+              1000,
+            ],
+            "type": "p",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <button
+              className="btn-edit"
+>
+              <Link
+                            replace={false}
+                            to="/blogs/edit/2"
+              >
+                            Edit
+              </Link>
+</button>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <Link
+                replace={false}
+                to="/blogs/edit/2"
+>
+                Edit
+</Link>,
+              "className": "btn-edit",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Edit",
+                "replace": false,
+                "to": "/blogs/edit/2",
+              },
+              "ref": null,
+              "rendered": "Edit",
+              "type": [Function],
+            },
+            "type": "button",
+          },
+          "type": "div",
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;

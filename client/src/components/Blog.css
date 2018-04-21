@@ -1,0 +1,33 @@
+.Blog {
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.Blog h2 {
+    text-align: center;
+}
+
+.btn-edit {
+    outline: none;
+    color: white;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    width: 70px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(128, 187, 40);
+}
+
+.btn-edit:hover {
+    color: #444;
+    background: greenyellow;
+}
+
+.btn-edit a {
+    text-decoration: none;
+    color: inherit;
+}
+
