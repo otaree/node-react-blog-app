@@ -8,6 +8,8 @@ const _ = require('lodash');
 
 const { mongoose } = require('./db/mongoose');
 const { Blog } = require('./models/blog');
+const { User } = require('./models/user');
+const { authenticate } = require('./middleware/authenticate');
 
 
 const app = express();
@@ -21,22 +23,32 @@ app.use(bodyParser.json());
 app.get('/blogs', async (req, res) => {
     
     try {
-        const blogs = await Blog.find();
+        const blogs = await Blog.find().select('title');
         res.send({ blogs });        
     } catch (e) {
         res.status(400).send(e);
     }
 });
 
-app.post('/blogs', async (req, res) => {
-    const body = _.pick(req.body, ["title", "author", "body"]);
+app.get('/blogs/user', authenticate, async (req, res) => {
+    
+    try {
+        const blogs = await Blog.find({ author: req.user._id }).select('title');
+        res.send({ blogs });
+    } catch (e) {
+        res.status(400).send();
+    }
+});
 
-    if (Object.keys(body).length !== 3) {
+app.post('/blogs', authenticate, async (req, res) => {
+    const body = _.pick(req.body, ["title", "body"]);
+
+    if (Object.keys(body).length !== 2) {
         return res.status(400).send(new Error('Missing field'));
     } 
 
     try {
-        const blog = await new Blog({...body}).save();
+        const blog = await new Blog({...body, author: req.user._id }).save();
         res.send({ blog });
     } catch (e) {
         res.status(400).send(e);
@@ -63,14 +75,14 @@ app.get('/blogs/:id', async (req, res) => {
 
 });
 
-app.patch('/blogs/:id', async (req, res) => {
+app.patch('/blogs/:id', authenticate, async (req, res) => {
     const id = req.params.id;
 
     if (!ObjectId.isValid(id)) {
         return res.status(404).send();
     }
 
-    const body = _.pick(req.body, ["title", "author", "body", "published"]);
+    const body = _.pick(req.body, ["title", "body", "published"]);
 
     if (_.isBoolean(body.published) && body.published) {
         body.publishedAt = new Date().getTime();
@@ -80,10 +92,10 @@ app.patch('/blogs/:id', async (req, res) => {
     }
 
     try {
-        const blog = await Blog.findByIdAndUpdate(id, { $set: body }, { new: true });
+        const blog = await Blog.findOneAndUpdate({ _id: id, author: req.user._id }, { $set: body }, { new: true });
         
         if(!blog) {
-            return res.status(404).send();
+            throw "No Blog";
         }
 
         res.send({ blog });
@@ -93,7 +105,7 @@ app.patch('/blogs/:id', async (req, res) => {
 
 });
 
-app.delete('/blogs/:id', async (req, res) => {
+app.delete('/blogs/:id', authenticate, async (req, res) => {
     const id = req.params.id;
 
     if (!ObjectId.isValid(id)) {
@@ -101,13 +113,55 @@ app.delete('/blogs/:id', async (req, res) => {
     }
 
     try {
-        const blog = await Blog.findByIdAndRemove(id);
-        if (!blog) return res.status(404).send();
+        const blog = await Blog.findOneAndRemove({ _id: id, author: req.user._id });
+        if (!blog) throw "No Blog";
         res.send({ blog });
     } catch (e) {
-        res.status(400).send(e);
+        res.status(400).send();
     }
 
+});
+
+app.post('/users', async (req, res) => {
+    const body = _.pick(req.body, ["email", "password"]);
+    
+    try {
+        const user = new User(body);
+        await user.save();
+        const token = await user.generateAuthToken();
+        res.header('x-auth', token).send(user);
+    } catch (e) {
+        res.status(400).send();
+    }
+
+});
+
+app.get('/users/me', authenticate, (req, res) => {
+    res.send(req.user);
+});
+
+app.post('/users/login', async (req, res) => {
+    const body = _.pick(req.body, ["email", "password"]);
+
+    try {
+        const user = await User.findByCredentials(body.email, body.password);
+        const token = await user.generateAuthToken();
+        res.header('x-auth', token).send(user);
+    } catch (e) {
+        res.status(400).send();
+    }
+});
+
+app.delete('/users/logout', authenticate, async (req, res) => {
+    const user = req.user;
+    const token = req.token;
+    
+    try {
+        await user.removeToken(token);
+        res.status(200).send();
+    } catch (e) {
+        res.status(400).send();
+    }
 });
 
 app.get('*', (req, res) => {

@@ -8,10 +8,8 @@ const BlogSchema = new mongoose.Schema({
         minlength: 1,
     },
     author: {
-        type: String,
+        type: mongoose.Schema.Types.ObjectId,
         required: true,
-        trim: true,
-        minlength: 1,
     },
     body: {
         type: String,
