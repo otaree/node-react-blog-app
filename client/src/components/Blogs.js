@@ -22,7 +22,7 @@ export const Blogs = (props) => (
 
 const mapStateToProps = state => {
     return {
-        blogs: state.map(blog => {
+        blogs: state.blogs.map(blog => {
             return {
                 id: blog._id,
                 title: blog.title

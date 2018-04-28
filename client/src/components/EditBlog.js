@@ -35,7 +35,7 @@ export class EditBlog extends React.Component {
 const mapStateToProps = (state, wrapperProps) => {
     const id = wrapperProps.match.params.id;
     return {
-        blog: state.find(blog => blog._id === id ),
+        blog: state.blogs.find(blog => blog._id === id ),
         id
     };
 };

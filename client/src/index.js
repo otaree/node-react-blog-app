@@ -1,14 +1,18 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import App from './components/App';
 import blogReducer from './reducers/blog';
+import authReducer from './reducers/auth';
 import * as actions from './actions/blog';
 import './index.css';
 
-const rootReducer = blogReducer;
+const rootReducer = combineReducers({
+    auth: authReducer,
+    blogs: blogReducer
+});
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
 const jsx = (
