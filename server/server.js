@@ -2,7 +2,7 @@ require('./config/config');
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors = require('cors');
+// const cors = require('cors');
 const ObjectId = require('mongoose').Types.ObjectId;
 const _ = require('lodash');
 
@@ -16,8 +16,16 @@ const app = express();
 const port = process.env.PORT || 5000;
 const publicPath = path.join(__dirname, "..", "client", "build");
 
+
+
 app.use(express.static(publicPath));
-app.use(cors());
+// configure CORS
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.header("Access-Control-Expose-Headers", "x-auth");
+    next();
+  });
 app.use(bodyParser.json());
 
 app.get('/blogs', async (req, res) => {

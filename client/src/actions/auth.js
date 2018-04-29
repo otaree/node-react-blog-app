@@ -37,7 +37,6 @@ export const authLogin = (user) => {
         dispatch(authInit());
         try {
             const response = await Axios.post('http://localhost:5000/users/login', user);
-            console.log(response);
             dispatch(authSuccess(response.headers['x-auth'], response.data._id));
         } catch (e) {
             dispatch(authFail());
