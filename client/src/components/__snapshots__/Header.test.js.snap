@@ -41,6 +41,15 @@ ShallowWrapper {
                                 Create
                         </NavLink>
                 </li>
+                <li>
+                        <NavLink
+                                activeClassName="active"
+                                ariaCurrent="true"
+                                to="/auth/signup"
+                        >
+                                Auth
+                        </NavLink>
+                </li>
         </ul>
 </nav>,
     },
@@ -72,6 +81,15 @@ ShallowWrapper {
                                     to="/blogs/create"
                         >
                                     Create
+                        </NavLink>
+            </li>
+            <li>
+                        <NavLink
+                                    activeClassName="active"
+                                    ariaCurrent="true"
+                                    to="/auth/signup"
+                        >
+                                    Auth
                         </NavLink>
             </li>
 </ul>,
@@ -113,6 +131,15 @@ ShallowWrapper {
                                 to="/blogs/create"
                 >
                                 Create
+                </NavLink>
+</li>,
+              <li>
+                <NavLink
+                                activeClassName="active"
+                                ariaCurrent="true"
+                                to="/auth/signup"
+                >
+                                Auth
                 </NavLink>
 </li>,
             ],
@@ -181,6 +208,36 @@ ShallowWrapper {
               },
               "type": "li",
             },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <NavLink
+                  activeClassName="active"
+                  ariaCurrent="true"
+                  to="/auth/signup"
+>
+                  Auth
+</NavLink>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "activeClassName": "active",
+                  "ariaCurrent": "true",
+                  "children": "Auth",
+                  "to": "/auth/signup",
+                },
+                "ref": null,
+                "rendered": "Auth",
+                "type": [Function],
+              },
+              "type": "li",
+            },
           ],
           "type": "ul",
         },
@@ -219,6 +276,15 @@ ShallowWrapper {
                                         Create
                               </NavLink>
                     </li>
+                    <li>
+                              <NavLink
+                                        activeClassName="active"
+                                        ariaCurrent="true"
+                                        to="/auth/signup"
+                              >
+                                        Auth
+                              </NavLink>
+                    </li>
           </ul>
 </nav>,
       },
@@ -250,6 +316,15 @@ ShallowWrapper {
                                           to="/blogs/create"
                             >
                                           Create
+                            </NavLink>
+              </li>
+              <li>
+                            <NavLink
+                                          activeClassName="active"
+                                          ariaCurrent="true"
+                                          to="/auth/signup"
+                            >
+                                          Auth
                             </NavLink>
               </li>
 </ul>,
@@ -291,6 +366,15 @@ ShallowWrapper {
                                     to="/blogs/create"
                   >
                                     Create
+                  </NavLink>
+</li>,
+                <li>
+                  <NavLink
+                                    activeClassName="active"
+                                    ariaCurrent="true"
+                                    to="/auth/signup"
+                  >
+                                    Auth
                   </NavLink>
 </li>,
               ],
@@ -355,6 +439,36 @@ ShallowWrapper {
                   },
                   "ref": null,
                   "rendered": "Create",
+                  "type": [Function],
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <NavLink
+                    activeClassName="active"
+                    ariaCurrent="true"
+                    to="/auth/signup"
+>
+                    Auth
+</NavLink>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "activeClassName": "active",
+                    "ariaCurrent": "true",
+                    "children": "Auth",
+                    "to": "/auth/signup",
+                  },
+                  "ref": null,
+                  "rendered": "Auth",
                   "type": [Function],
                 },
                 "type": "li",
