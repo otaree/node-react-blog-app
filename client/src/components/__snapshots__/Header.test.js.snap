@@ -50,6 +50,15 @@ ShallowWrapper {
                                 Auth
                         </NavLink>
                 </li>
+                <li>
+                        <NavLink
+                                activeClassName="active"
+                                ariaCurrent="true"
+                                to="/logout"
+                        >
+                                Logout
+                        </NavLink>
+                </li>
         </ul>
 </nav>,
     },
@@ -90,6 +99,15 @@ ShallowWrapper {
                                     to="/auth/signup"
                         >
                                     Auth
+                        </NavLink>
+            </li>
+            <li>
+                        <NavLink
+                                    activeClassName="active"
+                                    ariaCurrent="true"
+                                    to="/logout"
+                        >
+                                    Logout
                         </NavLink>
             </li>
 </ul>,
@@ -140,6 +158,15 @@ ShallowWrapper {
                                 to="/auth/signup"
                 >
                                 Auth
+                </NavLink>
+</li>,
+              <li>
+                <NavLink
+                                activeClassName="active"
+                                ariaCurrent="true"
+                                to="/logout"
+                >
+                                Logout
                 </NavLink>
 </li>,
             ],
@@ -238,6 +265,36 @@ ShallowWrapper {
               },
               "type": "li",
             },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <NavLink
+                  activeClassName="active"
+                  ariaCurrent="true"
+                  to="/logout"
+>
+                  Logout
+</NavLink>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "activeClassName": "active",
+                  "ariaCurrent": "true",
+                  "children": "Logout",
+                  "to": "/logout",
+                },
+                "ref": null,
+                "rendered": "Logout",
+                "type": [Function],
+              },
+              "type": "li",
+            },
           ],
           "type": "ul",
         },
@@ -285,6 +342,15 @@ ShallowWrapper {
                                         Auth
                               </NavLink>
                     </li>
+                    <li>
+                              <NavLink
+                                        activeClassName="active"
+                                        ariaCurrent="true"
+                                        to="/logout"
+                              >
+                                        Logout
+                              </NavLink>
+                    </li>
           </ul>
 </nav>,
       },
@@ -325,6 +391,15 @@ ShallowWrapper {
                                           to="/auth/signup"
                             >
                                           Auth
+                            </NavLink>
+              </li>
+              <li>
+                            <NavLink
+                                          activeClassName="active"
+                                          ariaCurrent="true"
+                                          to="/logout"
+                            >
+                                          Logout
                             </NavLink>
               </li>
 </ul>,
@@ -375,6 +450,15 @@ ShallowWrapper {
                                     to="/auth/signup"
                   >
                                     Auth
+                  </NavLink>
+</li>,
+                <li>
+                  <NavLink
+                                    activeClassName="active"
+                                    ariaCurrent="true"
+                                    to="/logout"
+                  >
+                                    Logout
                   </NavLink>
 </li>,
               ],
@@ -469,6 +553,36 @@ ShallowWrapper {
                   },
                   "ref": null,
                   "rendered": "Auth",
+                  "type": [Function],
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <NavLink
+                    activeClassName="active"
+                    ariaCurrent="true"
+                    to="/logout"
+>
+                    Logout
+</NavLink>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "activeClassName": "active",
+                    "ariaCurrent": "true",
+                    "children": "Logout",
+                    "to": "/logout",
+                  },
+                  "ref": null,
+                  "rendered": "Logout",
                   "type": [Function],
                 },
                 "type": "li",

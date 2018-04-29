@@ -10,6 +10,7 @@ const Header = () => (
                 <li><NavLink exact to="/" activeClassName="active">Home</NavLink></li>
                 <li><NavLink to="/blogs/create" activeClassName="active">Create</NavLink></li>
                 <li><NavLink to="/auth/signup" activeClassName="active">Auth</NavLink></li>
+                <li><NavLink to="/logout" activeClassName="active">Logout</NavLink></li>
             </ul>
         </nav>
     </header>

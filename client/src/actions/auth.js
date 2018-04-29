@@ -56,14 +56,18 @@ export const authSingup = (user) => {
     };
 };
 
+const logout = () => {
+    return {
+        type: constants.AUTH_LOGOUT
+    }
+}
+
 export const authLogout = (token) => {
     return async dispatch => {
         dispatch(authInit());
         try {
             await Axios({ url: 'http://localhost:5000/users/logout', method: 'delete', headers: { 'x-auth': token }});
-            dispatch({
-                type: constants.AUTH_LOGOUT
-            });
+            dispatch(logout());
         } catch (e) {
             console.log(e);
         }
