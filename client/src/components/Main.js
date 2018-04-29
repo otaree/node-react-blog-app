@@ -7,17 +7,30 @@ import EditBlog from './EditBlog';
 import Auth from './Auth';
 import Logout from './Logout';
 
-const Main = () => (
-    <main>
+const Main = (props) => {
+    let routes = (
         <Switch>
             <Route exact path='/' component={Blogs} /> 
             <Route path='/auth' component={Auth} /> 
-            <Route path="/blogs/create" component={CreateBlog} />
-            <Route path="/blogs/edit/:id" component={EditBlog} />
             <Route exact path="/blogs/:id" component={Blog} />
-            <Route  path="/logout" component={Logout} />
         </Switch>
-    </main>
-);
+    );
+    if (props.isAuth) {
+        routes = (
+            <Switch>
+                <Route exact path='/' component={Blogs} /> 
+                <Route path="/blogs/create" component={CreateBlog} />
+                <Route path="/blogs/edit/:id" component={EditBlog} />
+                <Route exact path="/blogs/:id" component={Blog} />
+                <Route  path="/logout" component={Logout} />
+            </Switch>
+        );
+    }
+    return (
+        <main>
+            {routes}
+        </main>
+    );
+};
 
 export default Main;

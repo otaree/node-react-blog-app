@@ -36,27 +36,9 @@ ShallowWrapper {
                         <NavLink
                                 activeClassName="active"
                                 ariaCurrent="true"
-                                to="/blogs/create"
-                        >
-                                Create
-                        </NavLink>
-                </li>
-                <li>
-                        <NavLink
-                                activeClassName="active"
-                                ariaCurrent="true"
                                 to="/auth/signup"
                         >
                                 Auth
-                        </NavLink>
-                </li>
-                <li>
-                        <NavLink
-                                activeClassName="active"
-                                ariaCurrent="true"
-                                to="/logout"
-                        >
-                                Logout
                         </NavLink>
                 </li>
         </ul>
@@ -87,27 +69,9 @@ ShallowWrapper {
                         <NavLink
                                     activeClassName="active"
                                     ariaCurrent="true"
-                                    to="/blogs/create"
-                        >
-                                    Create
-                        </NavLink>
-            </li>
-            <li>
-                        <NavLink
-                                    activeClassName="active"
-                                    ariaCurrent="true"
                                     to="/auth/signup"
                         >
                                     Auth
-                        </NavLink>
-            </li>
-            <li>
-                        <NavLink
-                                    activeClassName="active"
-                                    ariaCurrent="true"
-                                    to="/logout"
-                        >
-                                    Logout
                         </NavLink>
             </li>
 </ul>,
@@ -146,27 +110,9 @@ ShallowWrapper {
                 <NavLink
                                 activeClassName="active"
                                 ariaCurrent="true"
-                                to="/blogs/create"
-                >
-                                Create
-                </NavLink>
-</li>,
-              <li>
-                <NavLink
-                                activeClassName="active"
-                                ariaCurrent="true"
                                 to="/auth/signup"
                 >
                                 Auth
-                </NavLink>
-</li>,
-              <li>
-                <NavLink
-                                activeClassName="active"
-                                ariaCurrent="true"
-                                to="/logout"
-                >
-                                Logout
                 </NavLink>
 </li>,
             ],
@@ -213,36 +159,6 @@ ShallowWrapper {
                 "children": <NavLink
                   activeClassName="active"
                   ariaCurrent="true"
-                  to="/blogs/create"
->
-                  Create
-</NavLink>,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "activeClassName": "active",
-                  "ariaCurrent": "true",
-                  "children": "Create",
-                  "to": "/blogs/create",
-                },
-                "ref": null,
-                "rendered": "Create",
-                "type": [Function],
-              },
-              "type": "li",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": <NavLink
-                  activeClassName="active"
-                  ariaCurrent="true"
                   to="/auth/signup"
 >
                   Auth
@@ -261,36 +177,6 @@ ShallowWrapper {
                 },
                 "ref": null,
                 "rendered": "Auth",
-                "type": [Function],
-              },
-              "type": "li",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": <NavLink
-                  activeClassName="active"
-                  ariaCurrent="true"
-                  to="/logout"
->
-                  Logout
-</NavLink>,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "activeClassName": "active",
-                  "ariaCurrent": "true",
-                  "children": "Logout",
-                  "to": "/logout",
-                },
-                "ref": null,
-                "rendered": "Logout",
                 "type": [Function],
               },
               "type": "li",
@@ -328,27 +214,9 @@ ShallowWrapper {
                               <NavLink
                                         activeClassName="active"
                                         ariaCurrent="true"
-                                        to="/blogs/create"
-                              >
-                                        Create
-                              </NavLink>
-                    </li>
-                    <li>
-                              <NavLink
-                                        activeClassName="active"
-                                        ariaCurrent="true"
                                         to="/auth/signup"
                               >
                                         Auth
-                              </NavLink>
-                    </li>
-                    <li>
-                              <NavLink
-                                        activeClassName="active"
-                                        ariaCurrent="true"
-                                        to="/logout"
-                              >
-                                        Logout
                               </NavLink>
                     </li>
           </ul>
@@ -379,27 +247,9 @@ ShallowWrapper {
                             <NavLink
                                           activeClassName="active"
                                           ariaCurrent="true"
-                                          to="/blogs/create"
-                            >
-                                          Create
-                            </NavLink>
-              </li>
-              <li>
-                            <NavLink
-                                          activeClassName="active"
-                                          ariaCurrent="true"
                                           to="/auth/signup"
                             >
                                           Auth
-                            </NavLink>
-              </li>
-              <li>
-                            <NavLink
-                                          activeClassName="active"
-                                          ariaCurrent="true"
-                                          to="/logout"
-                            >
-                                          Logout
                             </NavLink>
               </li>
 </ul>,
@@ -438,27 +288,9 @@ ShallowWrapper {
                   <NavLink
                                     activeClassName="active"
                                     ariaCurrent="true"
-                                    to="/blogs/create"
-                  >
-                                    Create
-                  </NavLink>
-</li>,
-                <li>
-                  <NavLink
-                                    activeClassName="active"
-                                    ariaCurrent="true"
                                     to="/auth/signup"
                   >
                                     Auth
-                  </NavLink>
-</li>,
-                <li>
-                  <NavLink
-                                    activeClassName="active"
-                                    ariaCurrent="true"
-                                    to="/logout"
-                  >
-                                    Logout
                   </NavLink>
 </li>,
               ],
@@ -505,36 +337,6 @@ ShallowWrapper {
                   "children": <NavLink
                     activeClassName="active"
                     ariaCurrent="true"
-                    to="/blogs/create"
->
-                    Create
-</NavLink>,
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "activeClassName": "active",
-                    "ariaCurrent": "true",
-                    "children": "Create",
-                    "to": "/blogs/create",
-                  },
-                  "ref": null,
-                  "rendered": "Create",
-                  "type": [Function],
-                },
-                "type": "li",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": <NavLink
-                    activeClassName="active"
-                    ariaCurrent="true"
                     to="/auth/signup"
 >
                     Auth
@@ -553,36 +355,6 @@ ShallowWrapper {
                   },
                   "ref": null,
                   "rendered": "Auth",
-                  "type": [Function],
-                },
-                "type": "li",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": <NavLink
-                    activeClassName="active"
-                    ariaCurrent="true"
-                    to="/logout"
->
-                    Logout
-</NavLink>,
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "activeClassName": "active",
-                    "ariaCurrent": "true",
-                    "children": "Logout",
-                    "to": "/logout",
-                  },
-                  "ref": null,
-                  "rendered": "Logout",
                   "type": [Function],
                 },
                 "type": "li",

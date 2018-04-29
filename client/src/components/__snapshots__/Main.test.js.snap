@@ -29,20 +29,8 @@ ShallowWrapper {
         />
         <Route
                 component={[Function]}
-                path="/blogs/create"
-        />
-        <Route
-                component={[Function]}
-                path="/blogs/edit/:id"
-        />
-        <Route
-                component={[Function]}
                 exact={true}
                 path="/blogs/:id"
-        />
-        <Route
-                component={[Function]}
-                path="/logout"
         />
 </Switch>,
     },
@@ -64,20 +52,8 @@ ShallowWrapper {
 />,
           <Route
             component={[Function]}
-            path="/blogs/create"
-/>,
-          <Route
-            component={[Function]}
-            path="/blogs/edit/:id"
-/>,
-          <Route
-            component={[Function]}
             exact={true}
             path="/blogs/:id"
-/>,
-          <Route
-            component={[Function]}
-            path="/logout"
 />,
         ],
       },
@@ -114,44 +90,8 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "component": [Function],
-            "path": "/blogs/create",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "component": [Function],
-            "path": "/blogs/edit/:id",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "component": [Function],
             "exact": true,
             "path": "/blogs/:id",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "component": [Function],
-            "path": "/logout",
           },
           "ref": null,
           "rendered": null,
@@ -180,20 +120,8 @@ ShallowWrapper {
           />
           <Route
                     component={[Function]}
-                    path="/blogs/create"
-          />
-          <Route
-                    component={[Function]}
-                    path="/blogs/edit/:id"
-          />
-          <Route
-                    component={[Function]}
                     exact={true}
                     path="/blogs/:id"
-          />
-          <Route
-                    component={[Function]}
-                    path="/logout"
           />
 </Switch>,
       },
@@ -215,20 +143,8 @@ ShallowWrapper {
 />,
             <Route
               component={[Function]}
-              path="/blogs/create"
-/>,
-            <Route
-              component={[Function]}
-              path="/blogs/edit/:id"
-/>,
-            <Route
-              component={[Function]}
               exact={true}
               path="/blogs/:id"
-/>,
-            <Route
-              component={[Function]}
-              path="/logout"
 />,
           ],
         },
@@ -265,44 +181,8 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "component": [Function],
-              "path": "/blogs/create",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "component": [Function],
-              "path": "/blogs/edit/:id",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "component": [Function],
               "exact": true,
               "path": "/blogs/:id",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "component": [Function],
-              "path": "/logout",
             },
             "ref": null,
             "rendered": null,
