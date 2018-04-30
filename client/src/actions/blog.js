@@ -1,31 +1,69 @@
 import * as constants from './constants';
 import Axios from 'axios';
 
+export const initBlogs = () => {
+    return {
+        type: constants.INIT_BLOGS,
+        loading: true
+    };
+};
+
+export const failBlogs = (message) => {
+    return {
+        type: constants.FAIL_BLOGS,
+        loading: false,
+        error: {
+            isError: true,
+            value: message
+        }
+    };
+};
+
+export const successBlogs = (blogs) => {
+    return {
+        type: constants.SUCCESS_BLOGS,
+        loading: false,
+        error: {
+            isError: false,
+            value: ''
+        },
+        blogs
+    };
+};
+
 export const fetchBlogs = () => {
-    return dispatch => {
-        return Axios.get('http://localhost:5000/blogs')
-            .then(response => dispatch({ type: constants.FETCH_BLOGS, blogs: response.data.blogs}));
+    return async dispatch => {
+        dispatch(initBlogs());
+        try {
+            const response = await Axios({ url: "http://localhost:5000/blogs", method: "get" });
+            dispatch(successBlogs(response.data.blogs));
+        } catch (e) {
+            dispatch(failBlogs("Unable to fetch blogs"))
+        }
     }
 };
 
-export const patchBlog = (id, data) => {
-    return dispatch => {
-        return Axios.patch(`http://localhost:5000/blogs/${id}`, {...data})
-            .then(response => dispatch({ type: constants.PATCH_BLOG, blog: response.data.blog, id }));
-    }
-};
+export const addBlog = (blog) => {
+    return {
+        type: constants.ADD_BLOG,
+        loading: false,
+        blog
+    };
+}
 
 
-export const createBlog = (blog) => {
-    return dispatch => {
-        return Axios.post('http://localhost:5000/blogs', {...blog})
-            .then(response => dispatch({ type: constants.CREATE_BLOG, blog: response.data.blog }));
-    }
-};
+export const deleteBlog = (blog) => {
+    return {
+        type: constants.DELETE_BLOG,
+        loading: false,
+        blog
+    };
+}
 
-export const deleteBlog = id => {
-    return dispatch => {
-        return Axios.delete(`http://localhost:5000/blogs/${id}`)
-                .then(response => dispatch({ type: constants.DELETE_BLOG, id }));
-    }
+export const patchBlog = (blog) => {
+    return {
+        type: constants.PATCH_BLOG,
+        loading: false,
+        blog
+    };
 }

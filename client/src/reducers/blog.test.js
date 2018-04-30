@@ -1,65 +1,120 @@
 import blogReducer from './blog';
 import * as constants from '../actions/constants';
 
-describe('blogReducer', () => {
-    const blogsState = [{
-        title: "First Title",
-        author: "author1",
-        body: "First blog body",
-        published: false,
-        _id: "1"
+let initialState = {
+    all: [],
+    blog: {},
+    error: {
+        isError: false,
+        value: ''
     },
-    {
-        title: "Second Title",
-        author: "author1",
-        body: "Second blog body",
-        published: false,
-        _id: "2"
-    }
+    loading: false
+};
+
+const blogs = [{
+    title: "First Title",
+    _id: "1"
+},
+{
+    title: "Second Title",
+    _id: "2"
+}
 ];
 
-    it("fetches and sets  blogs", () => {
-        expect(blogReducer({}, {
-                type: constants.FETCH_BLOGS,
-                blogs: blogsState
-            }))
-            .toEqual(blogsState)
+describe('blogReducer', () => {
+    it('should init blogs', () => {
+        expect(blogReducer(initialState, { 
+            type: constants.INIT_BLOGS,
+            loading: true
+        })).toEqual({
+            ...initialState,
+            loading: true
+        })
     });
 
-    it("creates a blog", () => {
-        const blog = {
-            title: "Test Create",
-            author: "tester",
-            body: "Test body",
-            published: false,
-            _id: "123abc"
-        };
-
-        expect(blogReducer(blogsState, {
-            type: constants.CREATE_BLOG,
-            blog
-        })).toContainEqual(blog);
-    });
-
-    it("update a blog", () => {
-        const updateBlog = {
-            ...blogsState[1],
-            title: "Updated title",
-            published: true
-        };
-
-        expect(blogReducer(blogsState, {
-            type: constants.PATCH_BLOG,
-            blog: updateBlog,
-            id: blogsState[1]._id
-        })).toContainEqual(updateBlog);
-    });
-
-    it("Delete a blog", () => {
-        expect(blogReducer(blogsState, {
-            type: constants.DELETE_BLOG,
-            id: blogsState[0]._id
-        })).not.toContainEqual(blogsState[0]);
+    it('should set error', () => {
+        const message = "FAIL TO FETCH";
+        expect(blogReducer(initialState, {
+            type: constants.FAIL_BLOGS,
+            loading: false,
+            error: {
+                isError: true,
+                value: message
+            }
+        })).toEqual({
+            ...initialState,
+            loading: false,
+            error: {
+                isError: true,
+                value: message
+            }
+        });
     });
     
+    it('should set blogs', () => {
+        expect(blogReducer(initialState, {
+            type: constants.SUCCESS_BLOGS,
+            blogs,
+            loading: false,
+            error: {
+                isError: false,
+                value: ''
+            }
+        })).toEqual({
+            ...initialState,
+            all: blogs
+        });
+    });
+
+    it('should add blog', () => {
+        const blog = {
+            _id: '3',
+            title: "TEST THIS TITLE",
+        };
+
+        expect(blogReducer({
+            ...initialState,
+            all: blogs
+        }, {
+            type: constants.ADD_BLOG,
+            loading: false,
+            blog
+        })).toEqual({
+            ...initialState,
+            all: [...blogs, blog]
+        });
+    });
+
+    it('should patch blog', () => {
+        const updateBlog = {
+            _id: '1',
+            title: "Updated Title"
+        };
+
+        expect(blogReducer({
+            ...initialState,
+            all: blogs
+        }, {
+            type: constants.PATCH_BLOG,
+            loading: false,
+            blog: updateBlog
+        })).toEqual({
+            ...initialState,
+            all: [updateBlog, blogs[1]]
+        });
+    });
+
+    it('should delete blog', () => {
+        expect(blogReducer({
+            ...initialState,
+            all: blogs
+        }, {
+            type: constants.DELETE_BLOG,
+            loading: false,
+            blog: blogs[0]
+        })).toEqual({
+            ...initialState,
+            all: [blogs[1]]
+        });
+    });
 });

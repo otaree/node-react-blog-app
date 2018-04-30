@@ -1,9 +1,10 @@
 // Blogs Actions
-export const FETCH_BLOGS = "FETCH_BLOGS";
-export const FETCH_BLOG = "FETCH_BLOG";
-export const PATCH_BLOG = "PATCH_BLOG";
-export const CREATE_BLOG = "CREATE_BLOG";
+export const INIT_BLOGS = "INIT_BLOGS";
+export const FAIL_BLOGS = "FAIL_BLOGS";
+export const SUCCESS_BLOGS = "SUCCESS_BLOGS";
+export const ADD_BLOG = "ADD_BLOG";
 export const DELETE_BLOG = "DELETE_BLOG";
+export const PATCH_BLOG = "PATCH_BLOG";
 
 
 // Auth Actions
